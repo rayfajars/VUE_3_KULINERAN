@@ -155,6 +155,38 @@
       "noMeja": "3",
       "keranjangs": [],
       "id": 3
+    },
+    {
+      "nama": "Raisa",
+      "noMeja": "2",
+      "keranjangs": [
+        {
+          "jumlah_pemesanan": "3",
+          "keterangan": "gak pake nasi",
+          "products": {
+            "id": 2,
+            "kode": "K-02",
+            "nama": "Nasi Goreng Telur",
+            "harga": 14000,
+            "is_ready": true,
+            "gambar": "nasi-goreng-telor.jpg"
+          },
+          "id": 1
+        },
+        {
+          "jumlah_pemesanan": "5",
+          "products": {
+            "id": 5,
+            "kode": "K-05",
+            "nama": "Mie Goreng",
+            "harga": 13000,
+            "is_ready": true,
+            "gambar": "mie-goreng.jpg"
+          },
+          "id": 2
+        }
+      ],
+      "id": 4
     }
   ]
 }
