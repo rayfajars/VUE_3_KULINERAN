@@ -13,7 +13,7 @@
                         <li class="breadcrumb-item">
                         <router-link class="text-dark" to="/foods">Foods</router-link>
                         </li>
-                         <li class="breadcrumb-item active" aria-current="page">Detail Pesanan</li>
+                         <li class="breadcrumb-item active" aria-current="page">Detail Makanan</li>
                         
                     </ol>
                  </nav>
@@ -30,17 +30,17 @@
                   <hr>
                   <h4>Harga : <strong>Rp. {{ product.harga }}</strong></h4>
 
-                 <form class="mt-3">
+                 <form class="mt-3" v-on:submit.prevent>
                     <div class="mb-3 form-group">
                         <label for="jumlah_pesanan" class="form-label">Jumlah Pesanan : </label>
-                        <input type="number" class="form-control" id="jumlah_pesanan">
+                        <input type="number" class="form-control" id="jumlah_pesanan" v-model="pesan.jumlah_pemesanan" min="">
                     </div>
                     <div class="mb-3 form-group">
                         <label for="keterangan" class="form-label">Keterangan Pesanan : </label>
-                        <textarea name="keterangan" id="keterangan" class="form-control" placeholder="Keterangan spt: Pedas, Nasi setengah .." cols="20" rows="5"></textarea>
+                        <textarea name="keterangan" id="keterangan" class="form-control" placeholder="Keterangan spt: Pedas, Nasi setengah .." cols="20" rows="5" v-model="pesan.keterangan"></textarea>
                     </div>
 
-                    <button class="btn btn-success btn-sm float-right" type="submit"><b-icon-cart-plus></b-icon-cart-plus> Pesan</button>
+                    <button class="btn btn-success btn-sm float-right" type="submit" @click="pemesananBtn"><b-icon-cart-plus></b-icon-cart-plus> Pesan</button>
                     
                     </form>
               </div>
@@ -60,12 +60,41 @@ export default {
     },
     data() {
         return {
-            product: []
+            product: [],
+            pesan: {}
         }
     },
     methods:{
         setProduct(data){
             this.product = data 
+        },
+        pemesananBtn(){
+            if(this.pesan.jumlah_pemesanan) {
+            this.pesan.products = this.product
+            axios
+            .post('http://localhost:3000/keranjangs', this.pesan)
+            .then(()=> {
+                // kehalaman lain
+                this.$router.push({path : "/keranjang"})
+                // notification
+                this.$toast.success('Berhasil dipesan', {
+                    type:"success",
+                    position:"top-right",
+                    duration:3000,
+                    dismissible:true
+                })
+            })
+            .catch((err) =>{
+                console.log(err)
+            }) 
+            }else {
+                this.$toast.error('Pesanan belum dimasukan', {
+                    type:"error",
+                    position:"top-right",
+                    duration:3000,
+                    dismissible:true
+                })
+            }          
         }
     },
     mounted(){
