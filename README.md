@@ -51,7 +51,10 @@ npm run lint
 - Response berhasil pesan makanan
 <img width="960" alt="sukses pesan makanan" src="https://user-images.githubusercontent.com/58242304/103472110-e7e99480-4dbb-11eb-90fa-b1cb4921b1c2.png">
 
-
+### Dll
+```
 Tutorial : https://www.youtube.com/c/WahidevAcademy/featured
 backend : https://jsonplaceholder.typicode.com/, https://github.com/typicode/json-server
 ilustrasi : https://undraw.co/
+```
+
