@@ -20,6 +20,17 @@ npm run build
 npm run lint
 ```
 
+### START VUE
+```
+1. npm install -g @vue/cli
+2. vue ui
+3. create project -> npm
+4. add router (jika ingin memiliki beberapa halaman)
+5. add dependenc (bootstrap / bootstrap vue)
+5. add dependecy axios (untuk API,https://github.com/axios/axios)
+6. add extensions vetur
+```
+
 ### HASIL
 
 - Home
@@ -43,3 +54,4 @@ npm run lint
 
 Tutorial : https://www.youtube.com/c/WahidevAcademy/featured
 backend : https://jsonplaceholder.typicode.com/, https://github.com/typicode/json-server
+ilustrasi : https://undraw.co/
