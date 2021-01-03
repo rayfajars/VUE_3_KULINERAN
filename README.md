@@ -21,6 +21,7 @@ npm run lint
 ```
 
 ### HASIL
+
 - Home
 <img width="960" alt="kulineran1" src="https://user-images.githubusercontent.com/58242304/103472102-de602c80-4dbb-11eb-8d61-3f133d30879f.png">
 <br>
@@ -38,3 +39,7 @@ npm run lint
 <br>
 - Response berhasil pesan makanan
 <img width="960" alt="sukses pesan makanan" src="https://user-images.githubusercontent.com/58242304/103472110-e7e99480-4dbb-11eb-90fa-b1cb4921b1c2.png">
+
+
+Tutorial : https://www.youtube.com/c/WahidevAcademy/featured
+backend : https://jsonplaceholder.typicode.com/, https://github.com/typicode/json-server
