@@ -14,6 +14,10 @@
                         <router-link class="text-dark" to="/foods">Foods</router-link>
                         </li>
                          <li class="breadcrumb-item active" aria-current="page">Detail Makanan</li>
+                          <router-link class="text-dark" to="/foods">Foods</router-link>
+                           <router-link class="text-dark" to="/foods">Foods</router-link>
+                            <router-link class="text-dark" to="/foods">Foods</router-link>
+                             <router-link class="text-dark" to="/foods">Foods</router-link>
                         
                     </ol>
                  </nav>
