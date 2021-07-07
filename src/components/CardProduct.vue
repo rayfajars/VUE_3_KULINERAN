@@ -1,6 +1,6 @@
 <template>
-  <div class="card shadow card-product">
-  <img :src="'assets/images/'+ product.gambar " class="card-img-top" alt="...">
+  <div class="card shadow card-product h-100">
+  <img :src="'assets/images/'+ product.gambar " class="card-img-top" alt="..." width="100%" height="200px">
   <div class="card-body">
     <h5 class="card-title">{{ product.nama }}</h5>
     <p class="card-text">Harga Rp. {{product.harga}}</p>
